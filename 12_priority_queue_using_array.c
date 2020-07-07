@@ -128,12 +128,17 @@ void disphighp()
         int max=front;
         for(int i=front+1;i<=rear;i++)
         {
-            if(elements[max].priority>elements[i].priority)
+
+            int s=elements[i].priority;
+            int k=elements[max].priority;
+            if(s>k)
             {
                 max=i;
+                s=elements[i].priority;
             }
         }
-        printf("\n %d is the element with highest priority",elements[max].a);
+         printf("\n %d is the element with highest priority",elements[max].a);
+
     }
 }
 
